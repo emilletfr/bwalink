@@ -1,4 +1,4 @@
-FROM ruby:2-alpine
+FROM arm32v7/ruby:3.3
 LABEL org.opencontainers.image.source="https://github.com/jshank/bwalink"
 
 # Fix for dev tools from https://renehernandez.io/snippets/install-development-tools-in-alpine/
