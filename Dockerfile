@@ -4,12 +4,12 @@ LABEL org.opencontainers.image.source="https://github.com/jshank/bwalink"
 # Fix for dev tools from https://renehernandez.io/snippets/install-development-tools-in-alpine/
 # This also adds the build-base, uses it and then wipes out the tools to keep the image small
 # Installing socat to link the serial over IP device
-RUN apt-get update 
-RUN apt-get add --no-cache build-base
+# RUN apt-get update 
+# RUN apt-get add --no-cache build-base
 RUN bundle config set deployment 'true'
 RUN gem install balboa_worldwide_app
-RUN apk add --no-cache socat tzdata
-RUN apk del build-base
+# RUN apk add --no-cache socat tzdata
+# RUN apk del build-base
 RUN rm -rf /var/cache/apk/*
 
 # See https://iotbyhvm.ooo/using-uris-to-connect-to-a-mqtt-server/ for MQTT_URI format
